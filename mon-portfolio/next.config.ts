@@ -1,7 +1,15 @@
-import type { NextConfig } from "next";
+import withMDX from '@next/mdx'
+import type { NextConfig } from 'next'
+
+const withMdx = withMDX({
+  extension: /\.(md|mdx)$/,
+  options: {
+    // xdm / remark / rehype plugins can be added here if needed
+  }
+})
 
 const nextConfig: NextConfig = {
-  /* config options here */
-};
+  pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
+}
 
-export default nextConfig;
+export default withMdx(nextConfig)

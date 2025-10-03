@@ -41,7 +41,7 @@ export default function Home() {
           <a href="https://github.com/MathisFPN" target="_blank" rel="noopener noreferrer">
             <Github className="w-6 h-6 hover:text-blue-600 transition cursor-pointer" />
           </a>
-          <a href="https://linkedin.com/in/ton-profil" target="_blank" rel="noopener noreferrer">
+          <a href="https://linkedin.com/in/mathis-frappin" target="_blank" rel="noopener noreferrer">
             <Linkedin className="w-6 h-6 hover:text-blue-600 transition cursor-pointer" />
           </a>
           <a href="mailto:ton@email.com">
