@@ -1,9 +1,11 @@
 import Link from 'next/link'
 import React from 'react'
 
-const A = (props: any) => {
-  const { href } = props
-  if (href && href.startsWith('/')) {
+type AnchorProps = React.ComponentPropsWithoutRef<'a'>
+
+const A = (props: AnchorProps) => {
+  const href = props.href ?? ''
+  if (href.startsWith('/')) {
     return <Link {...props} />
   }
   return <a {...props} />

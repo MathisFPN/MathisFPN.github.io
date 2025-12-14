@@ -10,6 +10,22 @@ const withMdx = withMDX({
 
 const nextConfig: NextConfig = {
   pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
+  turbopack: {
+    // Force Turbopack to use the app directory instead of the parent monorepo root
+    root: __dirname,
+  },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'cdn.pixabay.com',
+      },
+    ],
+  },
 }
 
 export default withMdx(nextConfig)
