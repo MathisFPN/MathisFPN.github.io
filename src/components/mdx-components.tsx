@@ -6,7 +6,7 @@ type AnchorProps = React.ComponentPropsWithoutRef<'a'>
 const A = (props: AnchorProps) => {
   const href = props.href ?? ''
   if (href.startsWith('/')) {
-    return <Link {...props} />
+    return <Link href={href} {...props} />
   }
   return <a {...props} />
 }
