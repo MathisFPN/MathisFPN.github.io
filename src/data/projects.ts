@@ -26,7 +26,7 @@ export const projects: Project[] = [
       "Stage de fin d'études (avril → juin 2025) au Conseil Départemental de la Haute-Savoie. Objectif : livrer un écosystème complet — application mobile, console web pour linguistes et pipeline DevOps — afin de démocratiser l'apprentissage du patois savoyard.",
     image: 'https://images.unsplash.com/photo-1470246973918-29a93221c455?auto=format&fit=crop&w=1200&q=80',
     technologies: ['Flutter', 'Vue.js', 'Node.js', 'PostgreSQL', 'Docker', 'GitLab CI/CD'],
-    date: '2025-06-15',
+    date: '2025',
     badge: 'Étude de cas',
     acPrincipaux: [
       "AC11.01 | Implémenter des conceptions simples",
@@ -60,7 +60,7 @@ export const projects: Project[] = [
     image: '/amongus.png',
     technologies: ['Python', 'MQTT', 'Raspberry Pi', 'Ollama', 'PyGame'],
     // githubUrl removed for IoT Among Us
-    date: '2025-02-20',
+    date: '2025',
     badge: 'Projet IoT',
     acPrincipaux: [
       "AC12.01 | Analyser un problème avec méthode",
@@ -99,7 +99,7 @@ export const projects: Project[] = [
     image: '/wpf_image.png',
     technologies: ['C#', 'WPF', 'XAML', 'Algorithmie'],
     liveUrl: '/wpf-galactic-shooter.pdf', // PDF à placer dans public/
-    date: '2024-11-05',
+    date: '2023 - 2024',
     acPrincipaux: [
       "AC11.04 | Développer des interfaces utilisateurs",
       "AC21.01 | Élaborer et implémenter une architecture logicielle",
@@ -124,7 +124,7 @@ export const projects: Project[] = [
     image: '/trou-noir-supermassif.jpg', // Place l'image dans public/
     technologies: ['Unity', 'C#', 'Physique du jeu', 'Level Design'],
     liveUrl: '/unity-escape-quasar.pdf', // PDF à placer dans public/
-    date: '2024-07-22',
+    date: '2024',
     acPrincipaux: [
       "AC12.01 | Analyser un problème avec méthode",
       "AC22.02 | Utiliser des techniques algorithmiques avancées",
@@ -152,11 +152,11 @@ export const projects: Project[] = [
   {
     slug: 'refonte-e-business',
     title: 'Upway – Site de vélos électriques reconditionnés',
-    description: 'Projet universitaire : solutions de transport plus efficaces et écologiques pour les utilisateurs.',
+    description: 'Projet universitaire : refonte d’un site e-commerce de vélos électriques reconditionnés.',
     longDescription: "Upway est un projet universitaire de site de vélos électriques reconditionnés, mené en équipe de 5. Ce travail m’a permis de développer mes compétences en communication, organisation et gestion de projet.",
     image: '/upway.png', // Place ton image dans public/upway.jpg
     technologies: ['Laravel', 'PHP', 'PostgreSQL', 'SQL', 'JavaScript', 'Bootstrap'],
-    date: '2024-03-14',
+    date: '2024',
     acPrincipaux: [
       "AC15.01 | Identifier les besoins métiers",
       "AC25.02 | Planifier et suivre un projet informatique",

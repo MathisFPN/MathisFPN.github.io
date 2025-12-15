@@ -136,10 +136,7 @@ export default async function Page({ params }: Props) {
               <div className="flex justify-between">
                   <dt className="text-white/70">Livraison</dt>
                 <dd className="font-semibold">
-                  {new Date(project.date).toLocaleDateString('fr-FR', {
-                    month: 'long',
-                    year: 'numeric',
-                  })}
+                  {project.date}
                 </dd>
               </div>
               <div className="flex justify-between">

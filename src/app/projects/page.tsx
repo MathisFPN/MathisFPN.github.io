@@ -2,9 +2,15 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { projects } from '@/data/projects'
 
-const orderedProjects = [...projects].sort((a, b) =>
-  new Date(b.date).getTime() - new Date(a.date).getTime()
-)
+const orderedProjects = [...projects].sort((a, b) => {
+  // Si la date est un nombre (année), trie par nombre décroissant, sinon laisse l'ordre
+  const aYear = parseInt(a.date);
+  const bYear = parseInt(b.date);
+  if (!isNaN(aYear) && !isNaN(bYear)) {
+    return bYear - aYear;
+  }
+  return 0;
+});
 
 export default function ProjectsPage() {
   return (
@@ -13,7 +19,7 @@ export default function ProjectsPage() {
         <p className="text-sm uppercase tracking-[0.3em] text-emerald-300">Case studies</p>
         <h1 className="text-4xl font-bold mt-3 mb-4 text-balance">Mes Projets</h1>
         <p className="text-white/70 text-pretty">
-          Sélection de projets académiques, professionnels et personnels illustrant les six compétences du BUT : IoT, DevOps, mobile et UX.
+          Sélection de projets académiques, professionnels et personnels illustrant les compétences du BUT Informatique.
         </p>
       </header>
       
@@ -38,7 +44,7 @@ export default function ProjectsPage() {
                   className="object-cover"
                 />
                 <div className="absolute top-4 left-4 bg-[#0b0d12]/80 backdrop-blur px-3 py-1 text-xs font-semibold rounded-full text-white">
-                  {new Date(project.date).toLocaleDateString('fr-FR', { month: 'short', year: 'numeric' })}
+                  {project.date}
                 </div>
                 {project.badge && (
                   <div className="absolute top-4 right-4 bg-purple-600 text-white px-3 py-1 text-xs font-semibold rounded-full">
