@@ -50,12 +50,12 @@ export default async function ProjectPage({ params }: Props) {
 
       <div className="grid lg:grid-cols-[2fr_1fr] gap-10">
         <article className="space-y-6">
-          <section className="bg-white rounded-2xl p-6 shadow-sm">
+          <section className="bg-gray-900/80 rounded-2xl p-6 shadow-sm">
             <h2 className="text-lg font-semibold mb-3">Objectif</h2>
-            <p className="text-gray-700 leading-relaxed">{project.description}</p>
+              <p className="leading-relaxed text-white">{project.description}</p>
           </section>
 
-          <section className="bg-white rounded-2xl p-6 shadow-sm">
+          <section className="bg-gray-900/80 rounded-2xl p-6 shadow-sm">
             <h2 className="text-lg font-semibold mb-4">Stack et livrables</h2>
             <div className="flex flex-wrap gap-2 mb-5">
               {project.technologies.map((tech) => (
@@ -92,13 +92,13 @@ export default async function ProjectPage({ params }: Props) {
           </section>
 
           {project.caseStudySections && project.caseStudySections.length > 0 && (
-            <section className="bg-white rounded-2xl p-6 shadow-sm">
+            <section className="bg-gray-900/80 rounded-2xl p-6 shadow-sm">
               <h2 className="text-lg font-semibold mb-4">Étude de cas</h2>
               <div className="space-y-4">
                 {project.caseStudySections.map((section) => (
                   <div key={section.title}>
                     <p className="text-xs uppercase tracking-[0.3em] text-purple-500">{section.title}</p>
-                    <p className="text-gray-700 mt-2 leading-relaxed">{section.content}</p>
+                      <p className="mt-2 leading-relaxed text-white">{section.content}</p>
                   </div>
                 ))}
               </div>
@@ -117,10 +117,10 @@ export default async function ProjectPage({ params }: Props) {
               priority
             />
           </div>
-          <div className="bg-gray-50 rounded-2xl p-6">
+          <div className="bg-gray-900/80 rounded-2xl p-6">
             <dl className="space-y-3 text-sm">
               <div className="flex justify-between">
-                <dt className="text-gray-500">Livraison</dt>
+                  <dt className="text-white/70">Livraison</dt>
                 <dd className="font-semibold">
                   {new Date(project.date).toLocaleDateString('fr-FR', {
                     month: 'long',
@@ -129,11 +129,11 @@ export default async function ProjectPage({ params }: Props) {
                 </dd>
               </div>
               <div className="flex justify-between">
-                <dt className="text-gray-500">Rôle</dt>
+                  <dt className="text-white/70">Rôle</dt>
                 <dd className="font-semibold">Lead Developer</dd>
               </div>
               <div className="flex justify-between">
-                <dt className="text-gray-500">Scope</dt>
+                  <dt className="text-white/70">Scope</dt>
                 <dd className="font-semibold">Architecture → livraison</dd>
               </div>
             </dl>
