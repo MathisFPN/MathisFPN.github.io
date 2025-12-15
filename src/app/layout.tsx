@@ -18,8 +18,11 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body className={`${inter.className} bg-[#0b0d12] text-slate-100`}>
-        <Navigation />
-        {children}
+        {/* ParticlesBackground déplacé dans la page d'accueil */}
+        <div style={{position: 'relative', zIndex: 1}}>
+          <Navigation />
+          {children}
+        </div>
       </body>
     </html>
   )

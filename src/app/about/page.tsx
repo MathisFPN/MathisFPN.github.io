@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: 'À propos – Mathis Frappin',
@@ -235,10 +236,13 @@ export default function AboutPage() {
               <div className="w-full flex justify-center mb-3">
                 <div className="relative w-32 h-32 rounded-xl overflow-hidden bg-white/20 border border-white/20">
                   {/* Remplacez /hobby1.jpg, /hobby2.jpg, /hobby3.jpg par vos images */}
-                  <img
+                  <Image
                     src={`/hobby${idx + 1}.jpg`}
                     alt={`Photo ${hobby.title}`}
                     className="object-cover w-full h-full"
+                    width={128}
+                    height={128}
+                    priority={idx === 0}
                   />
                 </div>
               </div>

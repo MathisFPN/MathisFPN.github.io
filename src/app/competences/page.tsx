@@ -2,21 +2,6 @@ import Link from 'next/link'
 
 import Competences from '@/components/Competences'
 
-const resources = [
-  {
-    title: 'Semestres 1-2',
-    items: ['Bases dev (R1.01 → R2.02)', 'Architecture & OS (R1.03/R1.04)', 'SQL & statistiques (R1.05/R2.08)', 'PPP & communication (R1.12)'],
-  },
-  {
-    title: 'Semestres 3-4',
-    items: ['Web moderne & optimisation (R3.01 → R4.04)', 'Programmation système & réseaux (R3.05/R3.06)', 'Virtualisation & DevOps (R4.Real.08)', 'Management SI / droit (R3.10/R3.11)'],
-  },
-  {
-    title: 'Semestre 5',
-    items: ['Projets complexes (R5.Real.xx)', 'Qualité algorithmique & IA', 'Automatisation CI/CD', 'Leadership d’équipe & économie durable'],
-  },
-]
-
 export default function CompetencesPage() {
   return (
     <main className="max-w-6xl mx-auto px-6 py-16 text-slate-100 space-y-16">

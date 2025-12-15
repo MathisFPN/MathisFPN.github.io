@@ -2,8 +2,8 @@
 const channels = [
   {
     title: 'Email direct',
-    value: 'contact@mathisfrappin.dev',
-    href: 'mailto:contact@mathisfrappin.dev',
+    value: 'mathis.frappin@etu.univ-smb.fr',
+    href: 'mailto:mathis.frappin@etu.univ-smb.fr',
     detail: 'Mon adresse mail universitaire.',
   },
   {
