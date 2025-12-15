@@ -46,17 +46,17 @@ const educationPath = [
 
 const languages = [
   {
-    flag: '🇫🇷',
+    flag: 'FR',
     title: 'Français',
     detail: 'Langue maternelle',
   },
   {
-    flag: '🇬🇧',
+    flag: 'GB',
     title: 'Anglais',
     detail: 'Niveau intermédiaire B2+',
   },
   {
-    flag: '🇪🇸',
+    flag: 'ES',
     title: 'Espagnol',
     detail: 'Niveau élémentaire',
   },
@@ -105,14 +105,40 @@ export default function AboutPage() {
         </p>
       </header>
 
-      <section className="grid md:grid-cols-3 gap-6">
-        {softSkills.map((skill) => (
-          <article key={skill.title} className="rounded-3xl border border-white/10 bg-white/5 p-6 text-white/90">
-            <h2 className="text-lg font-semibold mb-2 text-white">{skill.title}</h2>
-            <p className="text-sm leading-relaxed text-white/70">{skill.description}</p>
+
+      <section className="space-y-6">
+        <div className="space-y-2">
+          <p className="text-sm uppercase tracking-[0.3em] text-purple-500">Expériences Professionnelles</p>
+          <h2 className="text-2xl font-semibold text-balance">Mon parcours professionnel</h2>
+        </div>
+        <div className="space-y-6">
+          <article className="relative border-l border-white/10 pl-8">
+            <span className="absolute left-[-6px] top-4 h-3 w-3 rounded-full border-2 border-[#0b0d12] bg-emerald-400" />
+            <div className="flex flex-col gap-1 md:flex-row md:items-center md:justify-between text-white">
+              <h3 className="text-xl font-semibold">Département de la Haute-Savoie (Stage)</h3>
+              <span className="text-sm font-semibold text-emerald-300">2025</span>
+            </div>
+            <p className="text-white/80 mt-2">Développement d&rsquo;une application mobile en Flutter pour l&rsquo;apprentissage du patois savoyard, accompagnée d’une interface web d’administration (Vue.js + API). Mise en place d’une intégration continue (GitLab CI/CD, SonarQube).</p>
           </article>
-        ))}
+          <article className="relative border-l border-white/10 pl-8">
+            <span className="absolute left-[-6px] top-4 h-3 w-3 rounded-full border-2 border-[#0b0d12] bg-emerald-400" />
+            <div className="flex flex-col gap-1 md:flex-row md:items-center md:justify-between text-white">
+              <h3 className="text-xl font-semibold">Université Savoie Mont Blanc - Annecy, France</h3>
+              <span className="text-sm font-semibold text-emerald-300">2024 - 2025</span>
+            </div>
+            <p className="text-white/80 mt-2">Refonte d&rsquo;un site web de commerce en ligne, en l&rsquo;adaptant aux besoins d&rsquo;un client.</p>
+          </article>
+          <article className="relative border-l border-white/10 pl-8">
+            <span className="absolute left-[-6px] top-4 h-3 w-3 rounded-full border-2 border-[#0b0d12] bg-emerald-400" />
+            <div className="flex flex-col gap-1 md:flex-row md:items-center md:justify-between text-white">
+              <h3 className="text-xl font-semibold">Carrefour Provencia (Supermarché, 50 à 99 employés) - Cruseilles, France</h3>
+              <span className="text-sm font-semibold text-emerald-300">Étés 2023 - 2024</span>
+            </div>
+            <p className="text-white/80 mt-2">Missions : Caissier, réception des paiements et émission des reçus, suivi de toutes les opérations de caisse et de crédit.</p>
+          </article>
+        </div>
       </section>
+
 
       <section className="space-y-6">
         <div className="space-y-2">
@@ -134,6 +160,20 @@ export default function AboutPage() {
                   <li key={highlight}>{highlight}</li>
                 ))}
               </ul>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="space-y-4">
+        <div className="space-y-2">
+          <p className="text-sm uppercase tracking-[0.3em] text-purple-500">Soft skills</p>
+        </div>
+        <div className="grid md:grid-cols-3 gap-6">
+          {softSkills.map((skill) => (
+            <article key={skill.title} className="rounded-3xl border border-white/10 bg-white/5 p-6 text-white/90">
+              <h3 className="text-lg font-semibold mb-2 text-white">{skill.title}</h3>
+              <p className="text-sm leading-relaxed text-white/70">{skill.description}</p>
             </article>
           ))}
         </div>
