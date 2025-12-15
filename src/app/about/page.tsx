@@ -34,7 +34,7 @@ const educationPath = [
   },
   {
     period: '2022',
-    title: 'Baccalauréat général (Mathématiques & NSI) — Mention Bien',
+    title: 'Baccalauréat général (Mathématiques & Physique-Chimie) — Mention Bien',
     subtitle: 'Lycée Mme de Staël — Saint-Julien-en-Genevois',
     details: 'Baccalauréat français (diplôme d’études secondaires spécialisées en sciences et en mathématiques) avec mention assez bien.',
     highlights: [
