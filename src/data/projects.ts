@@ -57,7 +57,7 @@ export const projects: Project[] = [
     description: 'Jeu de déduction connecté : Raspberry Pi, MQTT et IA locale pour traquer l’imposteur.',
     longDescription:
       "Projet académique mené à 4 : création d'un clone d'Among Us orienté IoT. Chaque Raspberry Pi incarne un capteur de ville, l'arbitre central collecte les températures et une IA Ollama aide à repérer l'imposteur.",
-    image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80',
+    image: '/amongus.png',
     technologies: ['Python', 'MQTT', 'Raspberry Pi', 'Ollama', 'PyGame'],
     // githubUrl removed for IoT Among Us
     date: '2025-02-20',
@@ -96,7 +96,7 @@ export const projects: Project[] = [
     description: "Jeu de tir spatial à défilement vertical demandant réflexes et précision, développé sans moteur de jeu (tout est codé en C# natif).",
     longDescription:
       "Projet de 1ère année (SAE S1.01) : développement d'un 'Shoot'em up' type Bullet Hell en C# et WPF. Application lourde, architecture événementielle, gestion des états du jeu et optimisation de l'affichage dynamique.",
-    image: 'https://images.unsplash.com/photo-1470229538611-16ba8c7ffbd7?auto=format&fit=crop&w=1200&q=80',
+    image: '/wpf_image.png',
     technologies: ['C#', 'WPF', 'XAML', 'Algorithmie'],
     liveUrl: '/wpf-galactic-shooter.pdf', // PDF à placer dans public/
     date: '2024-11-05',

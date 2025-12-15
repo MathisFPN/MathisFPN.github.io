@@ -127,7 +127,7 @@ export default async function Page({ params }: Props) {
               alt={project.title}
               width={800}
               height={600}
-              className="h-72 w-full object-cover"
+              className={`h-72 w-full ${project.slug === 'iot-among-us' ? 'object-contain bg-black' : 'object-cover'}`}
               priority
             />
           </div>
