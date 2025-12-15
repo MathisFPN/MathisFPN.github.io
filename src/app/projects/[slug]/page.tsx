@@ -82,7 +82,17 @@ export default async function Page({ params }: Props) {
                   Voir le code
                 </a>
               )}
-              {project.liveUrl && (
+              {project.liveUrl && !project.githubUrl && (
+                <a
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center rounded-full bg-purple-600 px-5 py-2 text-sm font-semibold text-white hover:bg-purple-700"
+                >
+                  Voir le rendu
+                </a>
+              )}
+              {project.liveUrl && project.githubUrl && (
                 <a
                   href={project.liveUrl}
                   target="_blank"
