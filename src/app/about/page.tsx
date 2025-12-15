@@ -34,7 +34,7 @@ const educationPath = [
   },
   {
     period: '2022',
-    title: 'Baccalauréat général (Mathématiques & Physique-Chimie) — Mention Bien',
+    title: 'Baccalauréat général (Mathématiques & Physique-Chimie) — Mention Assez Bien',
     subtitle: 'Lycée Mme de Staël — Saint-Julien-en-Genevois',
     details: 'Baccalauréat français (diplôme d’études secondaires spécialisées en sciences et en mathématiques) avec mention assez bien.',
     highlights: [
@@ -189,8 +189,19 @@ export default function AboutPage() {
       <section className="rounded-3xl bg-gradient-to-br from-purple-600 to-indigo-600 text-white p-8">
         <h2 className="text-2xl font-semibold mb-4">Loisirs & équilibre</h2>
         <div className="grid gap-4 md:grid-cols-3">
-          {hobbies.map((hobby) => (
-            <div key={hobby.title} className="rounded-2xl bg-white/10 p-4">
+          {hobbies.map((hobby, idx) => (
+            <div key={hobby.title} className="rounded-2xl bg-white/10 p-4 flex flex-col items-center">
+              {/* Espace image discipline */}
+              <div className="w-full flex justify-center mb-3">
+                <div className="relative w-32 h-32 rounded-xl overflow-hidden bg-white/20 border border-white/20">
+                  {/* Remplacez /hobby1.jpg, /hobby2.jpg, /hobby3.jpg par vos images */}
+                  <img
+                    src={`/hobby${idx + 1}.jpg`}
+                    alt={`Photo ${hobby.title}`}
+                    className="object-cover w-full h-full"
+                  />
+                </div>
+              </div>
               <p className="text-sm uppercase tracking-[0.3em] text-white/70">{hobby.title}</p>
               <p className="mt-2 text-white">{hobby.detail}</p>
             </div>
