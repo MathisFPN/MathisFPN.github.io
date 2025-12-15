@@ -24,8 +24,8 @@ export default function CompetencesPage() {
         <p className="text-sm uppercase tracking-[0.3em] text-emerald-300">Compétences</p>
         <h1 className="text-4xl font-bold text-balance">Les 6 compétences du BUT Informatique</h1>
         <p className="text-slate-300 max-w-3xl text-pretty">
-          Chaque projet mené (CD74, IoT Among Us, WPF, Unity…) coche au moins une des six compétences officielles du BUT. Voici comment elles sont
-          activées dans mon parcours : focus techniques, exemples d’applications concrètes et ressources universitaires associées.
+          Chaque projet mené (CD74, IoT Among Us, WPF, Unity…) valide au moins une des six compétences officielles du BUT. Voici comment elles ont été
+          réparties dans mon parcours.
         </p>
         <div className="flex flex-wrap gap-4 text-sm text-emerald-300">
           <a href="#competences-grid" className="hover:underline underline-offset-4">Aller aux compétences</a>
@@ -48,12 +48,38 @@ export default function CompetencesPage() {
             <div key={block.title} className="rounded-2xl border border-white/10 bg-[#0b0d12] p-5">
               <p className="text-sm uppercase tracking-[0.3em] text-emerald-300">{block.title}</p>
               <ul className="mt-4 space-y-2 text-sm text-slate-200">
-                {block.items.map((item) => (
-                  <li key={item} className="flex items-start gap-2">
-                    <span className="text-emerald-300">→</span>
-                    <span>{item}</span>
-                  </li>
-                ))}
+                {block.items.map((item) => {
+                  // Mapping manuel ressource → compétence
+                  let competence = '';
+                  if (item.includes('Bases dev')) competence = 'Réaliser';
+                  else if (item.includes('Architecture')) competence = 'Administrer';
+                  else if (item.includes('SQL')) competence = 'Gérer';
+                  else if (item.includes('PPP')) competence = 'Collaborer';
+                  else if (item.includes('Web')) competence = 'Réaliser';
+                  else if (item.includes('optimisation')) competence = 'Optimiser';
+                  else if (item.includes('Programmation système')) competence = 'Administrer';
+                  else if (item.includes('Virtualisation')) competence = 'Administrer';
+                  else if (item.includes('DevOps')) competence = 'Administrer';
+                  else if (item.includes('Management SI')) competence = 'Conduire';
+                  else if (item.includes('droit')) competence = 'Conduire';
+                  else if (item.includes('Projets complexes')) competence = 'Conduire';
+                  else if (item.includes('Qualité algorithmique')) competence = 'Optimiser';
+                  else if (item.includes('IA')) competence = 'Optimiser';
+                  else if (item.includes('CI/CD')) competence = 'Administrer';
+                  else if (item.includes('Leadership')) competence = 'Collaborer';
+                  else competence = '';
+                  return (
+                    <li key={item} className="flex items-start gap-2">
+                      <span className="text-emerald-300">→</span>
+                      <span>{item}</span>
+                      {competence && (
+                        <span className="ml-2 px-2 py-0.5 rounded-full bg-emerald-900/40 text-emerald-300 text-xs font-semibold">
+                          {competence}
+                        </span>
+                      )}
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           ))}
