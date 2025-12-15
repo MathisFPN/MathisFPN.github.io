@@ -43,11 +43,16 @@ export default function Home() {
               </p>
 
               <div className="flex flex-wrap gap-4">
-
-                <Link href="/contact" className="bg-emerald-400 text-black px-6 py-3 rounded-full font-semibold hover:bg-emerald-300"
-                >
+                <Link href="/contact" className="bg-emerald-400 text-black px-6 py-3 rounded-full font-semibold hover:bg-purple-700 hover:text-white transition">
                   Me contacter
                 </Link>
+                <a
+                  href="/CV%20FRANCAIS.pdf"
+                  download
+                  className="bg-purple-700 text-white px-6 py-3 rounded-full font-semibold border border-purple-700 hover:bg-emerald-400 hover:text-black transition"
+                >
+                  Télécharger mon CV
+                </a>
               </div>
             </div>
 
