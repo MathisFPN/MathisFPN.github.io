@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import { Github, Linkedin, Mail } from 'lucide-react'
 import Link from 'next/link'
 
@@ -21,7 +22,19 @@ export default function Home() {
 
           <div className="grid lg:grid-cols-[1.2fr_0.8fr] gap-12 items-start">
             <div className="space-y-6 max-w-3xl text-pretty">
+
               <p className="text-sm uppercase tracking-[0.4em] text-emerald-300">Mathis Frappin – Developper</p>
+
+              <div className="flex justify-center my-4">
+                <Image
+                  src="/mathis.jpg"
+                  alt="Mathis Frappin"
+                  width={270}
+                  height={270}
+                  className="rounded-full border-4 border-emerald-400 shadow-lg"
+                  priority
+                />
+              </div>
 
               <p className="text-lg text-white/100 break-words">
                 Étudiant en 3ᵉ année de BUT Informatique (IUT Annecy). Passionné par les technologies de l&rsquo;information, je suis enthousiaste à
@@ -68,7 +81,7 @@ export default function Home() {
               <p className="text-sm text-white/60 mb-3">Compétences clés</p>
               <p className="text-lg font-semibold">Flutter · Vue.js · Docker</p>
               <p className="text-white/70 mt-2 mb-4">
-                Réaliser (mobile), Gérer/Sécuriser (API PEVN), Administrer (GitLab CI/CD, SonarQube, auto-hébergement Debian).
+                Réaliser (mobile), Gérer et Sécuriser (API PEVN), Administrer (GitLab CI/CD, SonarQube, Docker Debian).
               </p>
               <Link href="/about" className="text-emerald-300 font-semibold hover:underline">
                 Voir mon parcours →
@@ -78,7 +91,7 @@ export default function Home() {
               <p className="text-sm text-white/60 mb-3">Hors-écran</p>
               <p className="text-lg font-semibold">Judo · Escalade · Culture japonaise</p>
               <p className="text-white/70 mt-2 mb-4">
-                Discipline, dépassement de soi et curiosité tech — les mêmes ingrédients que j’emmène sur les projets.
+                Discipline, dépassement de soi et curiosité.
               </p>
               <Link href="/contact" className="text-emerald-300 font-semibold hover:underline">
                 Échanger →
