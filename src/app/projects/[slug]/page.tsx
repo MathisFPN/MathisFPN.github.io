@@ -130,11 +130,7 @@ export default async function ProjectPage({ params }: Props) {
               </div>
               <div className="flex justify-between">
                   <dt className="text-white/70">Rôle</dt>
-                <dd className="font-semibold">Lead Developer</dd>
-              </div>
-              <div className="flex justify-between">
-                  <dt className="text-white/70">Scope</dt>
-                <dd className="font-semibold">Architecture → livraison</dd>
+                <dd className="font-semibold">Developer</dd>
               </div>
             </dl>
           </div>

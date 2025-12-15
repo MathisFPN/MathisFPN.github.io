@@ -1,62 +1,6 @@
 import Link from 'next/link'
-import { Book, Cpu, Database, Network, Target, Users } from 'lucide-react'
-import { projects } from '@/data/projects'
 
-const projectMap = projects.reduce<Record<string, { title: string; slug: string }>>((acc, project) => {
-  acc[project.slug] = { title: project.title, slug: project.slug }
-  return acc
-}, {})
-
-const competences = [
-  {
-    id: 1,
-    title: 'Réaliser un développement d’application',
-    icon: Cpu,
-    summary: 'Développement web/mobile, architecture MVC/MVVM et qualité logicielle.',
-    focus: ['POO · Flutter · React', 'Interfaces PyGame / Next.js', 'Tests et outillage CI'],
-    projectSlugs: ['patois-savoyard', 'iot-among-us', 'jeu-wpf-mvvm'],
-  },
-  {
-    id: 2,
-    title: 'Optimiser des applications informatiques',
-    icon: Target,
-    summary: 'Analyse de la complexité, graphes, intégration d’IA pour accélérer la prise de décision.',
-    focus: ['Algorithmes & graphes', 'Optimisation via IA (Ollama)', 'Automates, langages & stats'],
-    projectSlugs: ['iot-among-us', 'jeu-wpf-mvvm', 'unity-platformer'],
-  },
-  {
-    id: 3,
-    title: 'Administrer des systèmes communicants',
-    icon: Network,
-    summary: 'Systèmes, réseaux, protocoles MQTT et virtualisation Docker.',
-    focus: ['MQTT / Raspberry Pi', 'Réseaux LAN & sécurité', 'Automatisation via scripts & CI'],
-    projectSlugs: ['patois-savoyard', 'iot-among-us'],
-  },
-  {
-    id: 4,
-    title: 'Gérer des données de l’information',
-    icon: Database,
-    summary: 'Modélisation SQL/NoSQL, APIs de données et exploitation statistique.',
-    focus: ['PostgreSQL avancé', 'NoSQL & data pipelines', 'Analyses statistiques'],
-    projectSlugs: ['patois-savoyard', 'iot-among-us', 'refonte-e-business'],
-  },
-  {
-    id: 5,
-    title: 'Conduire un projet',
-    icon: Book,
-    summary: 'Gestion agile, cadrage, juridique et relation client.',
-    focus: ['Sprints agiles / Kanban', 'Management SI & droit numérique', 'PPP & restitution client'],
-    projectSlugs: ['patois-savoyard', 'refonte-e-business', 'iot-among-us'],
-  },
-  {
-    id: 6,
-    title: 'Travailler en équipe',
-    icon: Users,
-    summary: 'Communication, binômes projet, anglais technique et partage de connaissances.',
-    focus: ['Pair programming', 'Anglais technique', 'Ateliers avec linguistes / clients'],
-    projectSlugs: ['iot-among-us', 'patois-savoyard', 'refonte-e-business'],
-  },
-]
+import Competences from '@/components/Competences'
 
 const resources = [
   {
@@ -90,53 +34,8 @@ export default function CompetencesPage() {
         </div>
       </header>
 
-      <section id="competences-grid" className="grid gap-6 md:grid-cols-2">
-        {competences.map((competence) => (
-          <article
-            key={competence.id}
-            className="rounded-3xl border border-white/10 bg-white/5 p-6 hover:-translate-y-1 transition will-change-transform"
-          >
-            <div className="flex items-center gap-3">
-              <div className="rounded-2xl bg-emerald-400/10 text-emerald-300 p-3">
-                <competence.icon className="h-6 w-6" />
-              </div>
-              <div>
-                <p className="text-xs uppercase tracking-[0.3em] text-white/60">Compétence {competence.id}</p>
-                <h2 className="text-xl font-semibold text-pretty">{competence.title}</h2>
-              </div>
-            </div>
-            <p className="mt-4 text-sm text-slate-300 text-pretty">{competence.summary}</p>
-            <ul className="mt-4 space-y-2 text-sm text-slate-200">
-              {competence.focus.map((item) => (
-                <li key={item} className="flex items-start gap-2">
-                  <span className="text-emerald-300">•</span>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-            {competence.projectSlugs && (
-              <div className="mt-6 border-t border-white/10 pt-4">
-                <p className="text-xs uppercase tracking-[0.3em] text-white/60">Projets associés</p>
-                <div className="mt-3 flex flex-wrap gap-2">
-                  {competence.projectSlugs.map((slug) => {
-                    const related = projectMap[slug]
-                    if (!related) return null
-
-                    return (
-                      <Link
-                        key={slug}
-                        href={`/projects/${related.slug}`}
-                        className="text-sm text-emerald-300 underline underline-offset-4 hover:text-emerald-200"
-                      >
-                        {related.title}
-                      </Link>
-                    )
-                  })}
-                </div>
-              </div>
-            )}
-          </article>
-        ))}
+      <section id="competences-grid">
+        <Competences />
       </section>
 
       <section id="ancrage-pedagogique" className="rounded-3xl border border-white/10 bg-white/5 p-8">

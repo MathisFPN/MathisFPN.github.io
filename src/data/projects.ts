@@ -103,13 +103,37 @@ export const projects: Project[] = [
   },
   {
     slug: 'refonte-e-business',
-    title: 'Refonte e-business',
-    description: 'Audit UX et intégration responsive pour un site marchand régional.',
-    longDescription:
-      "Mission orientée client : ateliers de co-conception, refonte de l'ergonomie, intégration responsive (Tailwind) et optimisation des parcours pour augmenter la conversion sur desktop et mobile.",
-    image: 'https://images.unsplash.com/photo-1521790797524-b2497295b8a0?auto=format&fit=crop&w=1200&q=80',
-    technologies: ['Vue.js', 'Tailwind CSS', 'Netlify'],
-    liveUrl: 'https://demo.mathisfrappin.dev/ebusiness',
+    title: 'Upway – Site de vélos électriques reconditionnés',
+    description: 'Projet universitaire : solutions de transport plus efficaces et écologiques pour les utilisateurs.',
+    longDescription: "Upway est un projet universitaire de site de vélos électriques reconditionnés, mené en équipe de 5. Ce travail m’a permis de développer mes compétences en communication, organisation et gestion de projet.",
+    image: '/upway.png', // Place ton image dans public/upway.jpg
+    technologies: ['Laravel', 'PHP', 'PostgreSQL', 'SQL', 'JavaScript', 'Bootstrap'],
     date: '2024-03-14',
+    caseStudySections: [
+      {
+        title: 'Présentation',
+        content: "Upway propose des solutions de transport plus efficaces et écologiques pour les utilisateurs, en se concentrant sur la vente de vélos électriques reconditionnés."
+      },
+      {
+        title: 'Travail universitaire',
+        content: "Projet réalisé en groupe de 5 étudiants. Ce travail d’équipe a renforcé mes compétences en communication, organisation et gestion de projet."
+      },
+      {
+        title: 'Stack technique',
+        content: "Laravel, PHP, PostgreSQL, SQL, JavaScript, Bootstrap."
+      },
+      {
+        title: 'Organisation et méthode',
+        content: "Le projet a été mené en suivant une méthodologie agile, avec des réunions régulières et une répartition claire des tâches."
+      },
+      {
+        title: 'Conception',
+        content: "La conception s’est appuyée sur des diagrammes UML, une base de données relationnelle et une gestion des données conforme aux bonnes pratiques."
+      },
+      {
+        title: 'Fonctionnalités',
+        content: "Le site permet de parcourir les offres de vélos, de simuler un achat, et de gérer les commandes côté administrateur."
+      },
+    ],
   },
 ]
