@@ -59,7 +59,7 @@ export const projects: Project[] = [
       "Projet académique mené à 4 : création d'un clone d'Among Us orienté IoT. Chaque Raspberry Pi incarne un capteur de ville, l'arbitre central collecte les températures et une IA Ollama aide à repérer l'imposteur.",
     image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80',
     technologies: ['Python', 'MQTT', 'Raspberry Pi', 'Ollama', 'PyGame'],
-    githubUrl: 'https://github.com/MathisFPN/iot-among-us',
+    // githubUrl removed for IoT Among Us
     date: '2025-02-20',
     badge: 'Projet IoT',
     acPrincipaux: [
@@ -92,18 +92,28 @@ export const projects: Project[] = [
   },
   {
     slug: 'jeu-wpf-mvvm',
-    title: 'Jeu de gestion — C#/WPF',
-    description: 'Gameplay desktop structuré en MVVM avec conception objet poussée.',
+    title: 'Galactic Shooter (Jeu WPF)',
+    description: "Jeu de tir spatial à défilement vertical demandant réflexes et précision, développé sans moteur de jeu (tout est codé en C# natif).",
     longDescription:
-      "Production d'un jeu de gestion WPF : modélisation orientée objet, binding MVVM et moteur de sauvegarde permettant de sérialiser les parties. Focus sur la maintenabilité du code et les tests unitaires.",
+      "Projet de 1ère année (SAE S1.01) : développement d'un 'Shoot'em up' type Bullet Hell en C# et WPF. Application lourde, architecture événementielle, gestion des états du jeu et optimisation de l'affichage dynamique.",
     image: 'https://images.unsplash.com/photo-1470229538611-16ba8c7ffbd7?auto=format&fit=crop&w=1200&q=80',
-    technologies: ['C#', 'WPF', 'MVVM', 'SQLite'],
-    githubUrl: 'https://github.com/MathisFPN/wpf-game',
+    technologies: ['C#', 'WPF', 'XAML', 'Algorithmie'],
+    liveUrl: '/wpf-galactic-shooter.pdf', // PDF à placer dans public/
     date: '2024-11-05',
     acPrincipaux: [
       "AC11.04 | Développer des interfaces utilisateurs",
-      "AC21.04 | Intégrer des solutions dans un environnement de production",
-      "AC16.02 | Communiquer avec les différents acteurs",
+      "AC21.01 | Élaborer et implémenter une architecture logicielle",
+      "AC12.01 | Analyser un problème avec méthode",
+    ],
+    caseStudySections: [
+      {
+        title: 'Contexte',
+        content: "Projet de 1ère année (SAE S1.01) : développement d'un Shoot'em up type Bullet Hell en C# et WPF. Jeu codé sans moteur, architecture événementielle, gestion des états du jeu et optimisation de l'affichage dynamique.",
+      },
+      {
+        title: 'Preuve de compétence',
+        content: "Développement d'une application lourde en C# avec le framework WPF. J'ai été responsable de l'architecture événementielle (communication entre les fenêtres Menu et Jeu) et de la logique algorithmique des tirs du joueur. J'ai également implémenté la gestion des états du jeu (Boucle de jeu, Pause, Game Over) et l'optimisation de l'affichage dynamique (Parallax des fonds).",
+      },
     ],
   },
   {
@@ -113,7 +123,7 @@ export const projects: Project[] = [
     longDescription: "Projet universitaire en équipe de 4 : développement d'un jeu de parcours 3D spatial à la première personne. Le joueur doit échapper à l'attraction d'un trou noir.",
     image: '/trou-noir-supermassif.jpg', // Place l'image dans public/
     technologies: ['Unity', 'C#', 'Physique du jeu', 'Level Design'],
-    githubUrl: 'https://github.com/MathisFPN/unity-platformer',
+    liveUrl: '/unity-escape-quasar.pdf', // PDF à placer dans public/
     date: '2024-07-22',
     acPrincipaux: [
       "AC12.01 | Analyser un problème avec méthode",
