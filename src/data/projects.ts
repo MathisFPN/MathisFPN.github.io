@@ -21,9 +21,9 @@ export const projects: Project[] = [
     slug: 'patois-savoyard',
     title: 'Patois Savoyard – CD74',
     description:
-      'Étude de cas : orchestrer mobile Flutter, interface PEVN et infra auto-hébergée pour apprendre une langue régionale.',
+      'Développer une application mobile Flutter, interface PEVN et infra auto-hébergée pour apprendre une langue régionale.',
     longDescription:
-      "Stage de fin d'études (avril → juin 2025) au Conseil Départemental de la Haute-Savoie. Objectif : livrer un écosystème complet — application mobile, console web pour linguistes et pipeline DevOps — afin de démocratiser l'apprentissage du patois savoyard.",
+      "Stage de fin d'études (avril → juin 2025) au Conseil Départemental de la Haute-Savoie. Livrer un écosystème complet, application mobile, console web pour linguistes et pipeline DevOps. Afin de démocratiser l'apprentissage du patois savoyard.",
     image: 'https://images.unsplash.com/photo-1470246973918-29a93221c455?auto=format&fit=crop&w=1200&q=80',
     technologies: ['Flutter', 'Vue.js', 'Node.js', 'PostgreSQL', 'Docker', 'GitLab CI/CD'],
     date: '2025',
