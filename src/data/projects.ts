@@ -1,4 +1,4 @@
-export interface Project {
+export type Project = {
   slug: string
   title: string
   description: string
@@ -13,6 +13,7 @@ export interface Project {
     title: string
     content: string
   }[]
+  acPrincipaux?: string[]
 }
 
 export const projects: Project[] = [
@@ -27,6 +28,11 @@ export const projects: Project[] = [
     technologies: ['Flutter', 'Vue.js', 'Node.js', 'PostgreSQL', 'Docker', 'GitLab CI/CD'],
     date: '2025-06-15',
     badge: 'Étude de cas',
+    acPrincipaux: [
+      "AC11.01 | Implémenter des conceptions simples",
+      "AC21.01 | Élaborer et implémenter une architecture logicielle",
+      "AC16.01 | Travailler efficacement en équipe",
+    ],
     caseStudySections: [
       {
         title: 'Mobile — Reprendre et réaliser',
@@ -56,6 +62,11 @@ export const projects: Project[] = [
     githubUrl: 'https://github.com/MathisFPN/iot-among-us',
     date: '2025-02-20',
     badge: 'Projet IoT',
+    acPrincipaux: [
+      "AC12.01 | Analyser un problème avec méthode",
+      "AC22.03 | Analyser et optimiser un code existant",
+      "AC16.01 | Travailler efficacement en équipe",
+    ],
     caseStudySections: [
       {
         title: 'Architecture distribuée',
@@ -89,17 +100,44 @@ export const projects: Project[] = [
     technologies: ['C#', 'WPF', 'MVVM', 'SQLite'],
     githubUrl: 'https://github.com/MathisFPN/wpf-game',
     date: '2024-11-05',
+    acPrincipaux: [
+      "AC11.04 | Développer des interfaces utilisateurs",
+      "AC21.04 | Intégrer des solutions dans un environnement de production",
+      "AC16.02 | Communiquer avec les différents acteurs",
+    ],
   },
   {
     slug: 'unity-platformer',
-    title: 'Prototype Unity',
-    description: 'Création d’un platformer avec scripts C# et tuning physique.',
-    longDescription:
-      "Développement d'un prototype Unity : gestion des inputs, contrôleur physique custom et systèmes de feedback (particules, audio). Travail sur l'optimisation des scripts et l'intégration d'assets.",
-    image: 'https://images.unsplash.com/photo-1472457897821-70d3819a0e24?auto=format&fit=crop&w=1200&q=80',
-    technologies: ['Unity', 'C#', 'Cinemachine'],
+    title: 'Escape from Quasar',
+    description: 'Jeu 3D spatial de type Runner/Parkour où le joueur doit échapper à un trou noir.',
+    longDescription: "Projet universitaire en équipe de 4 : développement d'un jeu de parcours 3D spatial à la première personne. Le joueur doit échapper à l'attraction d'un trou noir.",
+    image: '/trou-noir-supermassif.jpg', // Place l'image dans public/
+    technologies: ['Unity', 'C#', 'Physique du jeu', 'Level Design'],
     githubUrl: 'https://github.com/MathisFPN/unity-platformer',
     date: '2024-07-22',
+    acPrincipaux: [
+      "AC12.01 | Analyser un problème avec méthode",
+      "AC22.02 | Utiliser des techniques algorithmiques avancées",
+      "AC16.01 | Travailler efficacement en équipe",
+    ],
+    caseStudySections: [
+      {
+        title: 'Contexte',
+        content: "Projet universitaire réalisé en équipe de 4. Objectif : créer un jeu de parcours 3D spatial immersif."
+      },
+      {
+        title: 'Gameplay',
+        content: "Jeu de type Runner/Parkour spatial à la première personne où le joueur doit échapper à l'attraction d'un trou noir."
+      },
+      {
+        title: 'Technologies',
+        content: "Unity, C#, Physique du jeu (Gravity), Level Design."
+      },
+      {
+        title: 'Preuve de compétence',
+        content: "Développement de scripts C# pour la logique du jeu sous Unity. J'ai spécifiquement conçu et implémenté le système physique de gravité et d'attraction (simulation de la force du trou noir sur le joueur) ainsi que la gestion du cycle de vie du joueur (Respawn). J'ai également participé à 50% du Level Design pour créer des parcours adaptés aux mécaniques de déplacement (Wall ride, Grappin)."
+      },
+    ],
   },
   {
     slug: 'refonte-e-business',
@@ -109,6 +147,10 @@ export const projects: Project[] = [
     image: '/upway.png', // Place ton image dans public/upway.jpg
     technologies: ['Laravel', 'PHP', 'PostgreSQL', 'SQL', 'JavaScript', 'Bootstrap'],
     date: '2024-03-14',
+    acPrincipaux: [
+      "AC15.01 | Identifier les besoins métiers",
+      "AC25.02 | Planifier et suivre un projet informatique",
+    ],
     caseStudySections: [
       {
         title: 'Présentation',

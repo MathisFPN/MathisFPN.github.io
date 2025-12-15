@@ -2,12 +2,13 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
+
 import { projects } from '@/data/projects'
+import type { Project } from '@/data/projects'
 
 type Props = {
   params: Promise<{ slug: string }>
 }
-
 export function generateStaticParams() {
   return projects.map((p) => ({ slug: p.slug }))
 }
@@ -28,13 +29,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
-export default async function ProjectPage({ params }: Props) {
+export default async function Page({ params }: Props) {
   const { slug } = await params
-  const project = projects.find((p) => p.slug === slug)
+  const project: Project | undefined = projects.find((p) => p.slug === slug)
 
   if (!project) {
     notFound()
   }
+
+  // Affiche les 2-3 AC principaux du projet si présents
+  const acList: string[] = project.acPrincipaux || [];
 
   return (
     <main className="max-w-5xl mx-auto px-4 py-16 text-slate-100">
@@ -136,6 +140,18 @@ export default async function ProjectPage({ params }: Props) {
           </div>
         </aside>
       </div>
+
+      {/* Affichage des AC principaux */}
+      {acList.length > 0 && (
+        <section className="bg-gray-900/80 rounded-2xl p-6 mt-10">
+          <h2 className="text-lg font-semibold mb-4 text-emerald-300">Apprentissages Critiques mobilisés</h2>
+          <ul className="list-disc list-inside text-white/90 text-sm space-y-1">
+            {acList.map((ac) => (
+              <li key={ac}>{ac}</li>
+            ))}
+          </ul>
+        </section>
+      )}
     </main>
   )
 }
