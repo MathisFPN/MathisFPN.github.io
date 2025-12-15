@@ -87,7 +87,7 @@ export const competencesData = [
         ],
       },
     ],
-    projetsAssocies: ["IoT Among Us", "Jeu WPF MVVM"],
+    projetsAssocies: ["IoT Among Us", "galactic shooter", "Escape from Quasar"],
   },
   {
     id: 3,
@@ -129,7 +129,7 @@ export const competencesData = [
         ],
       },
     ],
-    projetsAssocies: ["Patois Savoyard", "Refonte e-Business"],
+    projetsAssocies: ["Patois Savoyard", "upway", "Escape from Quasar"],
   },
   {
     id: 4,
@@ -197,7 +197,7 @@ export const competencesData = [
         ],
       },
     ],
-    projetsAssocies: ["Refonte e-Business", "Patois Savoyard"],
+    projetsAssocies: ["upway", "Patois Savoyard", "Escape from Quasar"],
   },
   {
     id: 6,
@@ -230,6 +230,6 @@ export const competencesData = [
         ],
       },
     ],
-    projetsAssocies: ["Refonte e-Business", "IoT Among Us"],
+    projetsAssocies: ["upway", "IoT Among Us", "Escape from Quasar"],
   },
 ];
